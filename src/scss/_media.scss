@@ -1,0 +1,163 @@
+@use "_mixins" as *;
+
+@include media-medium {
+
+  body {
+    min-width: auto;
+  }
+  
+  .navbar{
+    &__list {
+      flex-wrap: wrap;
+      gap: 32px;
+      font-size: 12px;
+    }
+  }
+  .paragraph {
+    font-size: 13px; 
+    line-height: 21px;
+  }
+  
+  .description {
+    h1 {
+    font-size: 32px;
+    }
+
+    &__button {
+      padding-inline: 29px;
+      padding-block: 18px 15px;
+      font-size: 12px;
+    }  
+  }
+  
+  .white-block {
+    max-width: 90%; 
+    margin-inline: auto;
+
+    &__header {
+      font-size: 26px;
+    }
+    &__text {
+      width: 100%;
+      padding-inline: 10px; 
+    }
+  }
+  
+  .works {
+    flex-wrap: wrap; 
+    align-items: center;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .processing-block{
+    &__header {
+      font-size: 24px;
+    } 
+  }
+  
+  .processing {
+    &__text {
+    width: 100%;
+    font-size: 14px; 
+    line-height: 22px;
+    padding-inline: 10px;
+    }
+     &__video iframe {
+      height: 60vw;
+      width: 100%; 
+  }
+  
+  .copyright {
+    &__header {
+    font-size: 18px;
+    }
+    &__sign {
+      font-size: 11px;
+    }
+    }
+  }
+}
+  
+@include media-small {
+  body {
+    min-width: 100%; 
+  }
+  
+  .navbar{  
+    &__list {
+    flex-wrap: wrap;    
+    gap: 16px;
+    font-size: 9px;
+    }
+  }
+  
+  .description {
+    h1 {
+    font-size: 20px; 
+    padding-top: 26px;
+    padding-bottom: 20px;
+    }
+    &__button {
+      max-width: 100%; 
+      padding-inline: 20px; 
+      padding-block: 12px 10px; 
+      font-size: 10px;
+    }
+  }
+  .paragraph {
+    font-size: 10px; 
+    line-height: 19px;
+  }
+  
+  .white-block {
+    width: 100%;
+
+    &__header {
+      font-size: 18px;
+    } 
+  }
+  
+  .works {
+    flex-direction: column; 
+    align-items: center;
+    gap: 5vw;
+
+    &__item {
+      width: auto;
+      font-size: 15px;
+    }
+
+    &__projects {
+      font-size: 12px;
+    }
+  }
+  
+  .processing-block {
+    &__header {
+    font-size: 24px;
+    }   
+  }
+
+  .processing {
+    &__text {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    }
+
+    &__video iframe {
+      height: 50vw;
+      width: 100%; 
+    }
+  }
+    
+  .copyright {
+    &__header {
+    font-size: 16px;
+    } 
+    &__sign {
+      font-size: 9px;
+    }
+  }
+}

@@ -1,0 +1,45 @@
+@use "_variables" as *;
+
+@mixin media-medium {
+  @media (max-width: 1160px) {
+    @content;
+  }
+}
+
+@mixin media-small {
+  @media (max-width: 375px) {
+    @content;
+  }
+}
+
+@mixin text-style($font-size, $line-height, $letter-spacing, $color) {
+  font-size: $font-size;
+  line-height: $line-height;
+  letter-spacing: $letter-spacing;
+  color: $color;
+}
+
+@mixin button-style($bg-color, $text-color, $padding-inline, $padding-block) {
+  color: $text-color;
+  background-color: $bg-color;
+  border: 0;
+  letter-spacing: $text-letter-spacing;
+  text-transform: uppercase;
+  padding-inline: $padding-inline;
+  padding-block: $padding-block;
+}
+
+@mixin flex-center($direction: row, $gap: 0) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: center;
+  align-items: center;
+  gap: $gap;
+}
+
+@mixin container-style($max-width, $padding-inline, $padding-block) {
+  max-width: $max-width;
+  padding-inline: $padding-inline;
+  margin-inline: auto;
+  padding-block: $padding-block;
+}

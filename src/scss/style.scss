@@ -1,0 +1,163 @@
+@use "common";
+@use "normalize";
+@use "_variables" as *;
+@use "_mixins" as *;
+@use "media" as *;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  min-width: 1150px;
+}
+
+.header {
+  background-color: $main-color;
+}
+
+.container {
+  @include container-style(1150px, 20px, 100px);
+
+  .header & {
+    padding-block: 0 141px;
+  }
+}
+
+.navbar {
+  &__list {
+    @include flex-center(row, 42px);
+    margin-block: 0;
+    padding-block: 80px;
+    padding-inline: 0;
+  }
+
+  &__item {
+    list-style-type: none;
+
+    a {
+      text-decoration: none;
+      text-transform: uppercase;
+      color: #000;
+      letter-spacing: $text-letter-spacing; 
+
+      &:hover {
+        color: $secondary-color; 
+      }
+    }
+  }
+}
+
+.paragraph {
+  @include text-style(16px, 26px, 0.05em, $main-text-color);
+  max-width: 540px;
+}
+
+.description {
+  h1 {
+    padding-top: 80px;
+    padding-bottom: 60px;
+    font-size: 48px;
+    font-weight: 500;
+    margin: 0;
+  }
+
+  &__about {
+    margin: 0;
+    padding-bottom: 65px;
+  }
+
+  &__button {
+    @include button-style($secondary-color, $text-white-color, 41px, 25px 20px);
+  }
+}
+
+.white-block {
+  width: 540px;
+  margin-inline: auto;
+
+  &__header {
+    @include flex-center(row, 0);
+    text-align: center;
+    font-size: 32px;
+    font-weight: 500;
+    padding-block: 12px;
+  }
+
+  &__text {
+    text-align: center;
+    margin: 0;
+    padding-top: 38px;
+  }
+}
+
+.blue-container {
+  background-color: $secondary-color;
+  color: $text-white-color;
+}
+
+.works {
+  display: flex;
+  gap: 49px;
+
+  &__item {
+    padding-left: 70px;
+    font-size: 21px;
+    line-height: 25px;
+    width: 141px;
+    height: 50px;
+    background: left no-repeat url("../project.svg");
+  }
+
+  &__projects {
+    font-size: 16px;
+    letter-spacing: 0.05em;
+  }
+}
+
+.main {
+  &__section {
+    background-color: $main-color;
+  }
+}
+
+.processing-block {
+  &__header {
+    @include flex-center(row, 0);
+    text-align: center;
+    margin: 0;
+    font-weight: 500;
+    font-size: 32px;
+  }
+}
+
+.processing {
+  &__text {
+    margin: 0;
+    text-align: center;
+    padding-block: 50px;
+    width: 540px;
+    margin-inline: auto;
+  }
+
+  &__video {
+    padding-top: 7px;
+  }
+}
+
+.copyright {
+  padding-block: 50px;
+
+  &__header {
+    padding-bottom: 20px;
+    font-size: 21px;
+    font-weight: 500;
+    margin: 0;
+  }
+
+  &__sign {
+    font-size: 13px;
+    font-weight: 400;
+  }
+}
